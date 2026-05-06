@@ -1,4 +1,6 @@
-
+/* ============================================
+   RESTRUCTURING ACADEMY — Light Warm Theme
+   ============================================ */
 
 :root {
   --gold: #B8860B;
@@ -840,6 +842,53 @@ img { display: block; max-width: 100%; }
   .hero-actions { flex-direction: column; gap: 0.8rem; }
   .btn { text-align: center; justify-content: center; }
   .founder-credentials { grid-template-columns: 1fr; }
+
+  /* ── Syllabus table → stacked cards on mobile ── */
+  .syllabus-table-wrap {
+    overflow-x: visible;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+  .syllabus-table,
+  .syllabus-table thead,
+  .syllabus-table tbody,
+  .syllabus-table th,
+  .syllabus-table td,
+  .syllabus-table tr { display: block; }
+
+  .syllabus-table thead { display: none; }
+
+  .syllabus-table tbody tr {
+    background: #fff;
+    border: 1px solid rgba(184,134,11,0.15);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .syllabus-table tbody tr:last-child { border-bottom: 1px solid rgba(184,134,11,0.15); }
+
+  .syl-td-num {
+    width: auto;
+    text-align: left;
+    padding: 0 0 0.2rem 0;
+    font-size: 1.1rem;
+  }
+  .syl-td-title {
+    white-space: normal;
+    min-width: 0;
+    padding: 0 0 0.5rem 0;
+    font-size: 1rem;
+  }
+  .syl-td-desc {
+    padding: 0 0 0.75rem 0;
+    font-size: 0.88rem;
+  }
+  .syllabus-table td:last-child {
+    white-space: normal;
+    padding: 0;
+  }
 }
 
 @media (max-width: 480px) {
