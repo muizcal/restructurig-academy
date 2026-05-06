@@ -513,23 +513,95 @@ img { display: block; max-width: 100%; }
 .course-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold); }
 
 /* ============================================
-   SYLLABUS
+   SYLLABUS TABLE
    ============================================ */
 .syllabus { padding: 6rem 0; background: var(--cream); }
 
-.syllabus-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
-.syl-module {
-  background: #fff;
-  border: 1px solid var(--card-border);
+.syllabus-table-wrap {
+  overflow-x: auto;
   border-radius: var(--radius);
-  padding: 1.8rem;
-  transition: var(--transition);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-deep);
+  border: 1px solid var(--card-border);
+  margin-top: 1rem;
 }
-.syl-module:hover { border-color: rgba(184,134,11,0.35); transform: translateY(-3px); }
-.syl-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: rgba(184,134,11,0.2); line-height: 1; margin-bottom: 0.8rem; }
-.syl-module h4 { color: var(--dark); font-size: 1rem; margin-bottom: 0.6rem; }
-.syl-module p { color: var(--text-muted); font-size: 0.86rem; line-height: 1.6; }
+
+.syllabus-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.syllabus-table thead tr {
+  background: linear-gradient(135deg, var(--dark), var(--dark-2));
+}
+
+.syllabus-table thead th {
+  padding: 1.1rem 1.4rem;
+  text-align: left;
+  color: var(--gold-bright);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.syllabus-table thead th:first-child { border-radius: 0; width: 56px; text-align: center; }
+
+.syllabus-table tbody tr {
+  border-bottom: 1px solid rgba(184,134,11,0.08);
+  transition: var(--transition);
+}
+.syllabus-table tbody tr:last-child { border-bottom: none; }
+.syllabus-table tbody tr:hover { background: rgba(184,134,11,0.04); }
+
+.syl-td-num {
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(184,134,11,0.25);
+  padding: 1.2rem 1rem;
+  width: 60px;
+  vertical-align: middle;
+}
+
+.syl-td-title {
+  font-weight: 700;
+  color: var(--dark);
+  padding: 1.2rem 1.4rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  min-width: 200px;
+}
+
+.syl-td-desc {
+  color: var(--text-muted);
+  padding: 1.2rem 1.4rem;
+  line-height: 1.65;
+  vertical-align: middle;
+}
+
+.syllabus-table td:last-child {
+  padding: 1.2rem 1.4rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.syl-tag {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.syl-tag.mindset { background: rgba(123,79,255,0.1); color: #7B4FFF; border: 1px solid rgba(123,79,255,0.2); }
+.syl-tag.wealth  { background: rgba(184,134,11,0.1); color: var(--gold); border: 1px solid rgba(184,134,11,0.25); }
+.syl-tag.finance { background: rgba(16,150,90,0.1); color: #10965A; border: 1px solid rgba(16,150,90,0.2); }
+.syl-tag.practical { background: rgba(220,80,30,0.1); color: #DC501E; border: 1px solid rgba(220,80,30,0.2); }
+
+
 
 /* ============================================
    SUCCESS STORY
