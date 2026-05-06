@@ -1,6 +1,4 @@
-/* ============================================
-   RESTRUCTURING ACADEMY — Light Warm Theme
-   ============================================ */
+
 
 :root {
   --gold: #B8860B;
@@ -42,7 +40,22 @@ img { display: block; max-width: 100%; }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-/* ---- UTILITY ---- */
+/* ---- SVG ICON HELPERS ---- */
+.pillar-icon svg,
+.bc-icon svg,
+.course-icon svg,
+.vision-icon svg { display: block; }
+
+.pillar-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: rgba(184,134,11,0.08); border-radius: 12px; flex-shrink: 0; }
+.bc-icon { display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; width: 64px; height: 64px; background: rgba(184,134,11,0.07); border-radius: 16px; }
+.course-icon { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: rgba(184,134,11,0.08); border-radius: 14px; margin-bottom: 1rem; }
+.vision-icon { display: flex; align-items: center; justify-content: center; width: 52px; height: 52px; background: rgba(240,192,64,0.1); border-radius: 14px; flex-shrink: 0; }
+.sh-icon { display: flex; align-items: center; flex-shrink: 0; }
+.cred-icon { display: flex; align-items: center; flex-shrink: 0; }
+.ci-icon { display: flex; align-items: center; flex-shrink: 0; padding-top: 2px; }
+.sandra-badge svg { flex-shrink: 0; }
+
+
 .gold-text { color: var(--gold-light); }
 .center { text-align: center; }
 
@@ -208,11 +221,13 @@ img { display: block; max-width: 100%; }
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 8rem 2rem 4rem;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   gap: 4rem;
   position: relative;
+  text-align: center;
 }
 
 .hero-overlay {
@@ -267,8 +282,8 @@ img { display: block; max-width: 100%; }
 .hero-sub {
   font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 520px;
-  margin-bottom: 2.2rem;
+  max-width: 580px;
+  margin: 0 auto 2.2rem;
   animation: fadeUp 0.8s 0.2s ease both;
   line-height: 1.8;
 }
@@ -279,6 +294,7 @@ img { display: block; max-width: 100%; }
   flex-wrap: wrap;
   margin-bottom: 3rem;
   animation: fadeUp 0.8s 0.3s ease both;
+  justify-content: center;
 }
 
 .hero-stats {
@@ -286,6 +302,7 @@ img { display: block; max-width: 100%; }
   align-items: center;
   gap: 2rem;
   animation: fadeUp 0.8s 0.4s ease both;
+  justify-content: center;
 }
 .stat-num {
   display: block;
@@ -705,6 +722,8 @@ img { display: block; max-width: 100%; }
 .footer-links a { color: rgba(255,255,255,0.5); font-size: 0.88rem; transition: var(--transition); }
 .footer-links a:hover { color: var(--gold-bright); }
 .footer-copy { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+.gp-link { color: var(--gold-bright); font-weight: 600; transition: var(--transition); }
+.gp-link:hover { color: #fff; text-decoration: underline; }
 
 /* ============================================
    SCROLL REVEAL
